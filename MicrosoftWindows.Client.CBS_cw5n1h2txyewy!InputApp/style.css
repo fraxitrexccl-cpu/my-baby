@@ -1,0 +1,143 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@500;600&display=swap');
+
+/* 1. Global Reset & Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Full-Screen Page Layout */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffeef1 0%, #ffd6e0 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #4a4a4a;
+}
+
+/* 3. Screen Wrappers */
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 4. Package Screen Styling */
+#package-container {
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 40px 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(230, 115, 140, 0.15);
+  transition: transform 0.2s ease;
+}
+
+#package-container:hover {
+  transform: translateY(-4px);
+}
+
+#package-img {
+  width: 180px;
+  max-width: 70vw;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.1));
+  animation: floatBounce 2s infinite ease-in-out;
+}
+
+.click-text {
+  margin-top: 20px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  color: #ff6b81;
+  letter-spacing: 0.5px;
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+/* 5. Message Card Screen Styling */
+.card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(214, 51, 132, 0.12);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ffe3e8;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Custom Pink Scrollbar for long text */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #ffd0d8;
+  border-radius: 10px;
+}
+
+#card-img {
+  width: 150px;
+  max-width: 60%;
+  height: auto;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  color: #ff4757;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.message-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #555555;
+  text-align: left;
+  background: #fff8f9;
+  padding: 16px;
+  border-radius: 16px;
+  border-left: 4px solid #ff6b81;
+}
+
+/* 6. Automatic Animations */
+@keyframes floatBounce {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes pulseGlow {
+  from { opacity: 0.75; }
+  to { opacity: 1; text-shadow: 0 0 10px rgba(255, 107, 129, 0.3); }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7) translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
