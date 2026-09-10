@@ -1,14 +1,13 @@
-/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@500;600&display=swap');
 
-/* 1. Global Reset & Box Sizing */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* 2. Full-Screen Page Layout */
+
 body {
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(135deg, #ffeef1 0%, #ffd6e0 100%);
@@ -20,7 +19,7 @@ body {
   color: #4a4a4a;
 }
 
-/* 3. Screen Wrappers */
+
 .screen {
   width: 100%;
   display: flex;
@@ -32,7 +31,7 @@ body {
   display: none !important;
 }
 
-/* 4. Package Screen Styling */
+
 #package-container {
   text-align: center;
   cursor: pointer;
@@ -67,7 +66,7 @@ body {
   animation: pulseGlow 1.5s infinite alternate;
 }
 
-/* 5. Message Card Screen Styling */
+
 .card {
   background: #ffffff;
   padding: 28px 22px;
@@ -82,7 +81,7 @@ body {
   animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Custom Pink Scrollbar for long text */
+
 .card::-webkit-scrollbar {
   width: 6px;
 }
@@ -119,7 +118,7 @@ h1 {
   border-left: 4px solid #ff6b81;
 }
 
-/* 6. Automatic Animations */
+
 @keyframes floatBounce {
   0% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-10px) scale(1.02); }
